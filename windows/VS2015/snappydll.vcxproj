@@ -33,6 +33,9 @@
     <ClInclude Include="..\config.h" />
     <ClInclude Include="..\snappy-stubs-public.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\snappydll.rc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{22728633-0F7E-4484-B19B-311D72172749}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -117,6 +120,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)..\lib\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>..\snappy.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,6 +136,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)..\lib\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>..\snappy.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -151,6 +156,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ImportLibrary>$(OutDir)..\lib\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>..\snappy.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -170,6 +176,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ImportLibrary>$(OutDir)..\lib\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>..\snappy.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
