@@ -327,6 +327,7 @@ bool GetUncompressedLength(const char* start, size_t n, size_t* result) {
 }
 
 namespace internal {
+
 uint16* WorkingMemory::GetHashTable(size_t input_size, int* table_size) {
   // Use smaller hash table when input.size() is smaller, since we
   // fill the table, incurring O(hash table size) overhead for
@@ -339,7 +340,7 @@ uint16* WorkingMemory::GetHashTable(size_t input_size, int* table_size) {
   }
 
   uint16* table;
-  if (htsize <= ARRAYSIZE(small_table_)) {
+  if (htsize <= (sizeof(small_table_) / sizeof(*(small_table_)))) {
     table = small_table_;
   } else {
     if (large_table_ == NULL) {
@@ -1361,7 +1362,7 @@ class SnappyScatteredWriter {
     char* const op_end = op_ptr_ + len;
     // See SnappyArrayWriter::AppendFromSelf for an explanation of
     // the "offset - 1u" trick.
-    if (SNAPPY_PREDICT_TRUE(offset - 1u < op_ptr_ - op_base_ &&
+    if (SNAPPY_PREDICT_TRUE(offset - 1u < (size_t)(op_ptr_ - op_base_) &&
                           op_end <= op_limit_)) {
       // Fast path: src and dst in current block.
       op_ptr_ = IncrementalCopy(op_ptr_ - offset, op_ptr_, op_end, op_limit_);
@@ -1449,7 +1450,7 @@ class SnappySinkAllocator {
   void Flush(size_t size) {
     size_t size_written = 0;
     size_t block_size;
-    for (int i = 0; i < blocks_.size(); ++i) {
+    for (size_t i = 0; i < blocks_.size(); ++i) {
       block_size = std::min<size_t>(blocks_[i].size, size - size_written);
       dest_->AppendAndTakeOwnership(blocks_[i].data, block_size,
                                     &SnappySinkAllocator::Deleter, NULL);

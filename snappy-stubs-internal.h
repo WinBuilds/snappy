@@ -75,14 +75,6 @@
 #define MAP_ANONYMOUS MAP_ANON
 #endif
 
-// The size of an array, if known at compile-time.
-// Will give unexpected results if used on a pointer.
-// We undefine it first, since some compilers already have a definition.
-#ifdef ARRAYSIZE
-#undef ARRAYSIZE
-#endif
-#define ARRAYSIZE(a) (sizeof(a) / sizeof(*(a)))
-
 // Static prediction hints.
 #ifdef HAVE_BUILTIN_EXPECT
 #define SNAPPY_PREDICT_FALSE(x) (__builtin_expect(x, 0))

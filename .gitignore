@@ -1,0 +1,9 @@
+.DS_Store
+*.lnk
+
+.vs
+ipch
+*.VC.db
+*.VC.opendb
+*.vcxproj.user
+*.aps
