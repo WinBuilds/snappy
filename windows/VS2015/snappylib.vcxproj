@@ -116,9 +116,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\snappy.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+      <Command>mkdir "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\snappy.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
 </Command>
     </PostBuildEvent>
     <PostBuildEvent>
@@ -140,9 +140,9 @@ copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\snappy.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+      <Command>mkdir "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\snappy.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
 </Command>
     </PostBuildEvent>
     <PostBuildEvent>
@@ -168,9 +168,9 @@ copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\snappy.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+      <Command>mkdir "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\snappy.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
 </Command>
     </PostBuildEvent>
     <PostBuildEvent>
@@ -196,9 +196,9 @@ copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\snappy.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
-copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+      <Command>mkdir "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\snappy.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
+copy "$(SolutionDir)..\..\windows\snappy-stubs-public.h" "$(WINBUILDS_ROOT)build_msvc14_$(Platform)\$(Configuration)\include\snappy\"
 </Command>
     </PostBuildEvent>
     <PostBuildEvent>
